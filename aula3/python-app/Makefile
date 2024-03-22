@@ -1,6 +1,7 @@
 build:
-	echo "Building Python App"
+	@echo "Building Python App"
 	docker build -t aula2imagem .
 
 run:
-	docker run --rm --name aula2container aula2imagem main.py soma 1 2
+	@echo "Running Python App"
+	@docker run --rm --name aula2container aula2imagem main.py ${ARGS}

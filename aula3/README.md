@@ -1,5 +1,4 @@
-# Aula 2
-* Docker File
-* Docker Image
-* Docker Hub e Registry
-* Docker Volume
+# Aula 3
+* Dockerfile, Docker Image
+* Docker Machine
+* Docker Swarm
