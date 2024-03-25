@@ -10,11 +10,11 @@ O projeto se baseia na criação de um docker compose, com os seguintes serviço
 
 O docker compose deve conter uma orquestração dos container, onde a aplicação deve ser o ultimo container a subir, garantindo assim que quando subir a aplicação não encontre nenhum error.
 
-Volume para persistir os dados do container do Minio, Redis e Rabbit.
-Criação de uma network e expor apenas as portas necessárias.
-Criação de um dockerfile para a aplicação.
+* Volume para persistir os dados do container do Minio, Redis e Rabbit.
+* Criação de uma network e expor apenas as portas necessárias.
+* Criação de um dockerfile para a aplicação.
 
-Pense que é uma aplicação que deve ter como preocupação uma alta disponibilidade e que seja  resiliente.
+Pense que é uma aplicação que deve ter como preocupação uma alta disponibilidade e que seja resiliente.
 
 A entrega pode ser feita através de um repositório como o github. Deve conter:
 
