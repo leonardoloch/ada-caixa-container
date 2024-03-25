@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx
+    environment:
+      - SECRET=/run/secret/db_pass
+    secrets:
+      - db_pass
+
+secrets:
+  db_pass:
+    file: db_pass_file

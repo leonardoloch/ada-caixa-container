@@ -3,6 +3,8 @@ version: '3.8'
 services:
   app:
     build: .
+    deploy:
+      replicas: 2
     ports:
       - 5000:5000
     environment:
@@ -11,7 +13,7 @@ services:
       - redis
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
-      interval: 1s
+      interval: 1m30s
       timeout: 1s
       retries: 1
       start_period: 1s
@@ -22,5 +24,6 @@ services:
       - 6379:6379
     volumes:
       - redis:/data
+
 volumes:
   redis:
