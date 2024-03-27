@@ -6,7 +6,7 @@ docker network create dind-network
 
 docker run --rm --privileged --name master -d \
 	--network dind-network \
-    -p 127.0.0.1:8080:8080 \
+    -p 127.0.0.1:80:80 \
 	docker:dind
 
 docker run --rm --privileged --name worker-01 -d \

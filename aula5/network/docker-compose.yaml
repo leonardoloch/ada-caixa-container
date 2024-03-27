@@ -18,12 +18,26 @@ services:
       retries: 1
       start_period: 1s
       start_interval: 1s
+    networks:
+      - app
   redis:
     image: redis
-    ports:
-      - 6379:6379
     volumes:
       - redis:/data
+    networks:
+      - app
 
 volumes:
   redis:
+
+# Criando uma nova network
+networks:
+  app:
+
+# Usando uma network ja existente
+# Lembre-se de comentar a network criada acima
+# docker network create app
+# networks:
+#   app:
+    # name: app
+    # external: true
